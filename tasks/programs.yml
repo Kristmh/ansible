@@ -3,4 +3,4 @@
   kewlfft.aur.aur:
     use: yay
     state: latest
-    name: ['lazygit', 'fzf', 'xclip']
+    name: ['lazygit', 'fzf', 'xclip', 'cmake', 'stow']

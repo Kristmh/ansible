@@ -4,6 +4,7 @@
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519"
   tasks:
     - include: tasks/ssh.yml
+    - include: tasks/programs.yml
     - include: tasks/neovim.yml
     - include: tasks/zsh.yml
     - include: tasks/dotfiles.yml
