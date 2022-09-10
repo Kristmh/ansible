@@ -1,0 +1,23 @@
+- name: Remove neovim
+  shell: rm -rf ~/Documents/neovim
+  tags:
+    - install
+    - neovim
+- name: Clone Neovim
+  ansible.builtin.git:
+    repo: 'https://github.com/neovim/neovim.git'
+    dest: "{{ lookup('env', 'HOME') }}/Documents/neovim"
+  tags:
+    - install
+    - neovim
+- name: Build neovim
+  shell: "cd {{ lookup('env', 'HOME') }}/Documents/neovim && make -j 20"
+  tags:
+    - install
+    - neovim
+- name: Install neovim
+  become: true
+  shell: "cd {{ lookup('env', 'HOME') }}/Documents/neovim && make install"
+  tags:
+    - install
+    - neovim

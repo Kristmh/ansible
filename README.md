@@ -3,7 +3,7 @@
 ## Install from cloned local
 
 ```bash
-ansible-playbook -t dotfiles --ask-vault-pass local.yml
+ansible-playbook -t dotfiles --ask-vault-pass main.yml
 ```
 
 ## Change to colemak dh iso keyboard
