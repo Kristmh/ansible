@@ -1,6 +1,3 @@
 ---
 - name: Install
-  kewlfft.aur.aur:
-    use: yay
-    state: latest
-    name: ['lazygit', 'fzf', 'xclip', 'cmake', 'stow']
+  shell: cd $HOME/dotfiles && sudo yay - S - < prog_list.txt
