@@ -10,9 +10,3 @@
     - install
     - dotfiles
     - stow
-- name: Stow dotfiles
-  shell: cd $HOME/dotfiles && sudo ./arch
-  tags:
-    - install
-    - dotfiles
-    - stow
