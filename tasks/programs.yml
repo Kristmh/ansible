@@ -1,8 +1,8 @@
 ---
-- name: Install
-  shell: cd $HOME/dotfiles && sudo yay - S - < prog_list.txt
+# - name: Install
+#   shell: cd $HOME/dotfiles && sudo yay - S - < prog_list.txt
 - name: install
   ansible.builtin.package:
-    name: ["stow", "ripgrep", "btop"]
+    name: ['stow', 'ripgrep', 'btop']
     state: latest
   become: true

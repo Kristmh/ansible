@@ -1,4 +1,4 @@
-- name: Cloning .dotfiles
+- name: Cloning dotfiles
   ansible.builtin.git:
     repo: 'git@github.com:Kristmh/dotfiles'
     dest: "{{ lookup('env', 'HOME') }}/dotfiles"
