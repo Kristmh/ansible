@@ -2,7 +2,7 @@
 
 ## Pull from git 
 ```bash
-ansible-pull -U git@github.com:Kristmh/ansible.git
+ansible-pull -U https://github.com/Kristmh/ansible.git
 ```
 ## Install local
 ```bash

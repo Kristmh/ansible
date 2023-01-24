@@ -1,0 +1,5 @@
+- block:
+
+  - import_tasks: packages.yml
+  - import_tasks: dotfiles.yml
+  - import_tasks: cron.yml

@@ -1,19 +1,23 @@
----
-- hosts: localhost
-  connection: local
+# tasks to complete before running roles
+- hosts: localhost 
+  tags: always
   become: true
+  pre_tasks:
+    - name: pre-run | update package cache (arch)
+      tags: always
+      pacman: update_cache=yes
+      changed_when: False
+      when: ansible_distribution == "Archlinux"
 
-  # intall packages 
-  tasks:
-  - name: install packages
-    package:
-      name:
-        - htop
-  
-  # copy files
-  - name: copy dotfiles
-    copy:
-        src: files/example.txt
-        dest: /home/krim/name.txt
-        owner: krim
-        group: krim
+    - name: pre-run | update package cache (debian, etc)
+      tags: always
+      apt: update_cache=yes
+      changed_when: False
+      when: ansible_distribution in ["Debian", "Ubuntu"]
+
+# run roles
+- hosts: localhost
+  tags: base
+  become: true
+  roles:
+    - base
