@@ -9,11 +9,6 @@ ansible-pull -U git@github.com:Kristmh/ansible.git
 ansible-playbook local.yml
 ```
 
-## Pull from git 
-```bash
-ansible-pull -U git@github.com:Kristmh/ansible.git
-```
-
 ## Change to colemak dh iso keyboard
 
 ```bash

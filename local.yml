@@ -9,3 +9,11 @@
     package:
       name:
         - htop
+  
+  # copy files
+  - name: copy dotfiles
+    copy:
+        src: files/example.txt
+        dest: /home/krim/name.txt
+        owner: krim
+        group: krim
