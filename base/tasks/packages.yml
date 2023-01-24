@@ -1,5 +1,15 @@
 - name: install packages
   package:
     name:
-        - htop
-    state: latest
+      - htop
+      - htop
+      - lf
+      - lazygit
+      - lazydocker
+      - fzf
+      - ripgrep
+      - zsh 
+      - alcritty
+      - curl
+      - xclip
+      - firefox
