@@ -1,10 +1,10 @@
 ---
-- hostname: localhost
+- hosts: localhost
   connection: local
   become: true
 
   tasks:
-    name: install packages
+  - name: install packages
     package:
       name:
         - htop
