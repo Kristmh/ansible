@@ -1,0 +1,23 @@
+- name: users | krim | create group
+  tags: groups,krim,users
+  group:
+    name: krim 
+    state: present
+
+- name: users | krim | create user
+  tags: krim,sudo,users
+  user:
+    name: krim
+    group: krim
+    groups: "{{ sudo_group }}"
+    state: present
+    shell: /bin/zsh
+
+- name: users | krim | krim | add sudoers file
+  tags: krim,settings,sudo,system,users
+  copy:
+    src: users/sudoers_krim
+    dest: /etc/sudoers.d/krim
+    owner: root
+    group: root
+    mode: 0440

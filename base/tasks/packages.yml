@@ -5,11 +5,12 @@
       - htop
       - lf
       - lazygit
-      - lazydocker
       - fzf
       - ripgrep
       - zsh 
-      - alcritty
+      - alacritty
       - curl
+      - git
+      - tldr
       - xclip
       - firefox

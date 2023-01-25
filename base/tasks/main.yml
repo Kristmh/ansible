@@ -1,4 +1,12 @@
+# Load distro-specific variables
+- include_vars: "{{ ansible_distribution }}.yml"
+  tags: always
+
+
 - block:
+  # setup and make sure users exist
+  - import_tasks: users/krim.yml
+  - import_tasks: users/root.yml
 
   - import_tasks: packages.yml
   - import_tasks: dotfiles.yml
